@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <!-- Linking CSS files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="header_contents">
+            <div class="logo">
+                <img src="web_template/weblogo.png" alt="Logo">
+            </div>
+            <div class="vl"></div>
+            <div class="title">
+                <h1>Quality Education</h1>
+                <p>United Nations Sustainable Development <br> Goal 4</p>
+            </div>
+        </div> 
+    </header>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="profile.html">User Profile (Sign In)</a></li>
+        </ul>
+    </nav>
+    <!-- Main content -->
+    <main>
+        <h1>Feedback Form</h1>
+        <hr>
+        <p><b>Note before filling form : </b>
+            <span class="red">* </span>stands for required data. 
+            You will receive a copy of your feedback form to the email entered in the form below.
+        </p>
+        <!-- Feedback form -->
+        <form id="feedbackForm" name="feedbackForm" onsubmit="return validateForm()">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div id="user_info">
+                    <label for="name">Name :<span class="red">* &ensp; </span></label><input type="text" id="name" placeholder="Enter your name here..."><br>
+                    <label for="email">Email :<span class="red">* &ensp;&nbsp;</span></label><input type="text" id="email" placeholder="Enter your email here...">
+                </div>
+            </fieldset>
+            <!-- Ratings & Comments -->
+            <fieldset>
+                <legend>Ratings & Comments</legend>
+                <div id="rating-label">
+                    <p>
+                        How satisfied are you with our website?
+                        Rate from 1 to 10, with 1 being "Not satisfied at all!"
+                        and 10 being "Extremely satisfied!"<span class="red">* </span><br>  
+                    </p>
+                </div>
+                <div id="rating-input">
+                    <!-- Radio buttons for rating -->
+                    <label>
+                        &ensp;1<br><input type="radio" name="rating" value="1">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;2<br><input type="radio" name="rating" value="2">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;3<br><input type="radio" name="rating" value="3">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;4<br><input type="radio" name="rating" value="4">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;5<br><input type="radio" name="rating" value="5">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;6<br><input type="radio" name="rating" value="6">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;7<br><input type="radio" name="rating" value="7">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;8<br><input type="radio" name="rating" value="8">
+                    </label>&emsp;&ensp;
+                    <label>
+                        &ensp;9<br><input type="radio" name="rating" value="9">
+                    </label>&emsp;&ensp;
+                    <label>
+                        10<br><input type="radio" name="rating" value="10">
+                    </label>
+                </div>
+                <!-- Comment category and text area -->
+                <div>
+                    <label for="comment-category">What is your comment about?</label>
+                    <select id="comment-category" name="comment-category">
+                        <option id="website-design" value="Website Design">Website Design</option>
+                        <option id="content-quality" value="Content Quality">Content Quality</option>
+                        <option id="user-exp" value="User Experience">User Experience</option>
+                        <option id="technical-issues" value="Technical Issues">Technical Issues</option>
+                        <option id="other" value="Other">Other</option>
+                        <option id="overall" value="Overall" selected>Overall</option>
+                    </select>
+                    <br>
+                    <label for="comment">Comment:</label><br>
+                    <textarea id="comment" name="comment"></textarea>
+                </div>
+            </fieldset>
+            <!-- Form buttons -->
+            <fieldset id="buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>    
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="page-editors">
+            <h1>Page Editor</h1>
+            <ul class="editor-list">
+                <li><a href="rafan-editor.html" target="_blank">Student 2 : Rafan</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Preview modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <h1>Preview of your submission</h1>
+            <hr>
+            <p id="previewName"></p>
+            <p id="previewEmail"></p>
+            <p id="previewRating"></p>
+            <p id="previewCommentCategory"></p>
+            <p id="previewComments"></p>
+            <div class="modal-buttons">
+                <button onclick="sendEmail()">Confirm Submission</button>
+                <button onclick="goBackToEdit()">Edit Submission</button>
+            </div>
+        </div>
+    </div>
+    <!-- Linking JavaScript file -->
+    <script src="feedback.js"></script>
+</body>
+</html>

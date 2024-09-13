@@ -1,0 +1,56 @@
+/*General styling*/
+h1 {
+    margin-bottom: 0px;
+}
+
+/*Styling the website mission part of the home page*/
+#mission {
+    text-align: justify;
+}
+
+
+#mission img {
+    height: 300px;
+    width: 300px;
+    float: left;
+    padding-right: 20px;
+}
+
+/*Styling the contents part of the home page*/
+
+.content-button {
+    width: 97.5%; 
+    height: 125px; 
+    background-color: #c32032; 
+    display: inline-block;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    border : 5px solid black;
+    position: relative;
+    text-align: left;
+    transition: transform 0.2s ease-out;
+}
+
+.content-button:hover {
+    transform: scale(1.03);
+}
+
+.small-text {
+    font-style: italic;
+    position: absolute;
+    top: 10px; 
+    left: 20px;
+    font-size: 20px; 
+    color: white; 
+    
+}
+
+.large-text {
+    position: absolute;
+    top: 50px;
+    left: 20px; 
+    color: white;
+    font-size: 25px; 
+    font-weight: bold; 
+}

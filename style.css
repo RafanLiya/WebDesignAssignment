@@ -1,0 +1,132 @@
+/*General styling*/
+body {
+    font-family: Times New Roman, Georgia, Palatino;
+    color:black;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+body h1 {
+    font-size: 31.5px;
+}
+
+/*Styling the header*/
+header {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.header_contents {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 5px solid white;
+    border-radius: 4px;
+}
+
+.vl {
+    border-left: 5px solid white;
+    height: 113px;
+  }
+
+.title {
+    text-align: left;
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.title h1{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.title p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/*Styling the navigation bar*/
+.navbar {
+    background-color: #c32032;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #83020c;
+}
+
+.navbar ul li a.active {
+    text-decoration: underline;
+}
+
+/*Styling the main element in every page*/
+main {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*Styling the footer*/
+footer {
+    background-color: black;
+    padding: 20px 0;
+}
+
+.page-editors {
+    text-align: center;
+    color: white;
+}
+
+.page-editors h1 {
+    margin: 0;
+}
+
+.page-editors .editor-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.page-editors .editor-list li {
+    margin: 6px 0;
+}
+
+.page-editors .editor-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+/*Styling the content page*/
+.content {
+    text-align: justify;
+}
+
+.content h1 {
+    margin-bottom: 0px;
+}
